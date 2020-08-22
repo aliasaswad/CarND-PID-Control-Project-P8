@@ -31,6 +31,21 @@ class PID {
    */
   double TotalError();
 
+  /*
+  *  Calculate the average PID error.
+  */
+  double AverageError();
+
+  /*
+  * Calculate the minimum PID error.
+  */
+  double MinError();
+
+  /*
+  * Calculate the maximum PID error.
+  */
+  double MaxError();
+
  private:
   /**
    * PID Errors
@@ -45,6 +60,17 @@ class PID {
   double Kp;
   double Ki;
   double Kd;
+
+  double p_error;
+  double i_error;
+  double d_error;
+  double prev_cte;
+
+  long counter;
+  double sum_error;
+  double min_error;
+  double max_error;
+
 };
 
 #endif  // PID_H
