@@ -8,6 +8,17 @@ PID::PID() {}
 
 PID::~PID() {}
 
+double PID::AverageError() {
+  return sum_error/counter;
+}
+
+double PID::MinError() {
+  return min_error;
+}
+
+double PID::MaxError() {
+  return max_error;
+}
 
 void PID::Init(double Kp_, double Ki_, double Kd_) {
   /**
