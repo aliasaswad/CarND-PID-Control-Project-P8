@@ -104,6 +104,19 @@ int main() {
     std::cout << "Disconnected" << std::endl;
   });
 
+  //Add Http Req. 
+  h.onHttpRequest([](uWS::HttpResponse *res, uWS::HttpRequest req, char *data, size_t, size_t) {
+    const std::string s = "<h1>Hello world!</h1>";
+    if (req.getUrl().valueLength == 1)
+    {
+      res->end(s.data(), s.length());
+    }
+    else
+    {
+      res->end(nullptr, 0);
+    }
+  });
+
   int port = 4567;
   if (h.listen(port)) {
     std::cout << "Listening to port " << port << std::endl;
