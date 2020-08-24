@@ -119,7 +119,7 @@ The three types of the PID components had beed used here in this implementation 
 
 The final results goten by trying the parameters values manually and each time check the results unitl we found the best values that made the car drive on the track. First, we need to make sure the car can drive straight with zero as parameters. Then add the proportional and the car start going on following the road but it starts overshooting go out of it. Next, we put a value zero for the integral part because this parameter is only move the car out of the road. Finally,  we added the differential to try to overcome the overshooting. The final results after putting all of these parameters togethor made the car drove on the track without going out of it. These parameters increased to minimize the average cross-track error on a single track lap.
 
-<img src="./results/pid-final-with-calc1.gif" width="1000" height="500" align="center"/>
+<img src="./results/pid-final-with-calc2.gif" width="1000" height="400" align="center"/>
 
 **A recorded video for with the final parameters could be found [here](https://github.com/aliasaswad/CarND-PID-Control-Project-P8/blob/master/results/pid_Final-with-calc_errorType.mp4).
 
