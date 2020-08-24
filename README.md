@@ -107,6 +107,19 @@ By clicking the "Select" button, the car starts driving. The debugging informati
 
 <img src="./results/drive-and-calc.png" width="800" height="300" align="center"/>
 
+## Code Implementation
+In this implementation I followed what I had taught in the project lessons.
+The PID implementation is done on the [`./src/PID.cpp`](https://github.com/aliasaswad/CarND-PID-Control-Project-P8/blob/master/scr/PID.cpp). The [`PID::UpdateError`](https://github.com/aliasaswad/CarND-PID-Control-Project-P8/blob/master/scr/PID.cpp#L55-#L77) method calculates proportional, integral and derivative errors and the [`PID::TotalError`](https://github.com/aliasaswad/CarND-PID-Control-Project-P8/blob/master/scr/PID.cpp#L13-#L19) calculates the total error using the appropriate coefficients.
+
+## Code Reflection
+
+The three types of the PID components had beed used here in this implementation until we got the final results that makes the car successfully drive on the track. The three components are differential, integral, and proportional. For the **differential**, it helps to counteract the proportional trend to overshoot the center line by smoothing the approach to it. A recorded video for this component could be found [here](https://github.com/aliasaswad/CarND-PID-Control-Project-P8/blob/master/results/pid_Differ_errorType.mp4). And for **integral**, it tries to eliminate a possible bias on the controlled system that could prevent the error to be eliminated. Using this component will makes the car move in a circles. In the case of the simulator, no bias is present. A recorded video for this component could be found [here](https://github.com/aliasaswad/CarND-PID-Control-Project-P8/blob/master/results/pid_Integ_errorType.mp4). Finally, for the **proportional**, it tries to steer the car toward the center line (against the cross-track error). Using this implementation will makes the car overshoots the central line very easily and go out of the road very quickly. A recorded video for this component could be found [here](https://github.com/aliasaswad/CarND-PID-Control-Project-P8/blob/master/results/pid_Prop_errorType.mp4).
+
+### Final implementation used for the project
+
+The final parameters values were chosen manually by try and error. First, we need to make sure the car can drive straight with zero as parameters. Then add the proportional and the car start going on following the road but it starts overshooting go out of it. Next, we put a value zero for the integral part because this parameter is only move the car out of the road. Finally,  we added the differential to try to overcome the overshooting. The final results after putting all of these parameters togethor made the car drove on the track without going out of it. These parameters increased to minimize the average cross-track error on a single track lap.
+
+**A recorded video for with the final parameters could be found [here](https://github.com/aliasaswad/CarND-PID-Control-Project-P8/blob/master/results/pid_Final-with-calc_errorType.mp4).
 
 ## How to write a README
 A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
