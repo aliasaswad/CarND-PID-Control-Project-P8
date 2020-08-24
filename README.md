@@ -105,7 +105,7 @@ Using the right arrow, we need to go to our project "PID Controller":
 
 By clicking the "Select" button, the car starts driving. The debugging information shown on the PID controller terminal. A recorded video for the final parameters could be found [here](https://github.com/aliasaswad/CarND-PID-Control-Project-P8/blob/master/results/pid_Final-with-calc_errorType.mp4).
 
-<img src="./results/drive-and-calc.png" width="800" height="600" align="center"/>
+<img src="./results/drive-and-calc.png" width="800" height="300" align="center"/>
 
 
 ## How to write a README
