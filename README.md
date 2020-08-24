@@ -99,7 +99,13 @@ Run the simulator shoud show the below image:
 
 <img src="./results/simulator1.png" width="800" height="600" align="center"/>
 
+Using the right arrow, we need to go to our project "PID Controller":
 
+<img src="./results/simulator2.png" width="800" height="600" align="center"/>
+
+By clicking the "Select" button, the car starts driving. The debugging information shown on the PID controller terminal. A recorded video for the final parameters could be found [here](https://github.com/aliasaswad/CarND-PID-Control-Project-P8/blob/master/results/pid_Final-with-calc_errorType.mp4).
+
+<img src="./results/drive-and-calc.png" width="800" height="600" align="center"/>
 
 
 ## How to write a README
